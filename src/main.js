@@ -54,7 +54,7 @@ function renderInventory(NFTs, ownerData) {
     const nft = NFTs[i];
     let htmlString = `
     <div class="card" >
-      <img class="card-img-top" src=${nft.metadata.image} alt="Card image cap">
+      <img class="card-img-top" src=${nft.metadata.image} alt="NFT">
       <div class="card-body">
         <h5 class="card-title">${nft.metadata.name}</h5>
         <p class="card-text">ID: ${nft.token_id}</p>
@@ -62,10 +62,10 @@ function renderInventory(NFTs, ownerData) {
         <p class="card-text">Tokens in circulation: ${nft.amount}</p>
         <p class="card-text">Number of owners: -</p>
         <p class="card-text">Your balance: ${ownerData[nft.token_id]}</p>
-        <a href="/mint.html?nftId=${
+        <a href="/src/mint.html?nftId=${
           nft.token_id
         }" class="btn btn-primary">Mint</a>
-        <a href="/transfer.html?nftId=${
+        <a href="/src/transfer.html?nftId=${
           nft.token_id
         }" class="btn btn-primary">Transfer</a>
       </div>
